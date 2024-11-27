@@ -1,85 +1,87 @@
 <script setup>
 import { RouterLink, RouterView } from 'vue-router'
-import HelloWorld from './components/HelloWorld.vue'
 </script>
 
 <template>
+
+  <!-- Permanent header navbar -->
+
   <header>
-    <img alt="Vue logo" class="logo" src="@/assets/logo.svg" width="125" height="125" />
-
-    <div class="wrapper">
-      <HelloWorld msg="You did it!" />
-
+    <div class="menuNav">
       <nav>
-        <RouterLink to="/">Home</RouterLink>
-        <RouterLink to="/error">About</RouterLink>
-      </nav>
+        <menu>
+          <li type="none" id="liHome"><router-link to="/" >Acceuil</router-link></li>
+          <li type="none" id="liPres"><a href="#presentationDiv">Présentation</a></li>
+          <li type="none" id="liProject"><a href="#projectDiv">Mes projets</a></li>
+        </menu>
+      </nav>     
+    </div>
+    <div class="logo">
+      <router-link to="/" >
+        <img alt="Lucas Nayet's logo" id="logoLN" src="/src/assets/Images/Logo 2.png" width="50" height="66" />
+      </router-link> 
+    </div>
+    <div class="contactLink">
+      <a href="#contactDiv" class="contactLink">Contact</a>
     </div>
   </header>
+
+
 
   <RouterView />
 </template>
 
 <style scoped>
+
+/* NavBar's and menu's style */
+
 header {
-  line-height: 1.5;
-  max-height: 100vh;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: var(--wht);
+  position: sticky;
 }
 
-.logo {
-  display: block;
-  margin: 0 auto 2rem;
+menu {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  flex-basis: content;
 }
 
-nav {
-  width: 100%;
-  font-size: 12px;
-  text-align: center;
-  margin-top: 2rem;
+#liPres,
+#liHome {
+  margin-right: 10%;
+}
+
+#liProject {
+  display: flex;
+  flex-basis: content;
+}
+
+div.menuNav {
+  width: 400px;
+}
+
+div.logo {
+  margin-right: 350px;
+}
+
+#logoLN {
+  position: sticky;
 }
 
 nav a.router-link-exact-active {
-  color: var(--color-text);
+  text-decoration: underline;
 }
 
-nav a.router-link-exact-active:hover {
-  background-color: transparent;
+nav a:hover,
+a.contactLink:hover {
+  font-size: 1.4rem;
 }
 
-nav a {
-  display: inline-block;
-  padding: 0 1rem;
-  border-left: 1px solid var(--color-border);
-}
-
-nav a:first-of-type {
-  border: 0;
-}
-
-@media (min-width: 1024px) {
-  header {
-    display: flex;
-    place-items: center;
-    padding-right: calc(var(--section-gap) / 2);
-  }
-
-  .logo {
-    margin: 0 2rem 0 0;
-  }
-
-  header .wrapper {
-    display: flex;
-    place-items: flex-start;
-    flex-wrap: wrap;
-  }
-
-  nav {
-    text-align: left;
-    margin-left: -1rem;
-    font-size: 1rem;
-
-    padding: 1rem 0;
-    margin-top: 1rem;
-  }
-}
 </style>
