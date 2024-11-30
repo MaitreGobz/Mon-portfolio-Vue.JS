@@ -6,8 +6,8 @@
       <div class="menuNav">
         <nav>
           <menu>
-            <li type="none" id="liHome"><router-link to="/" >Acceuil</router-link></li>
-            <li type="none" id="liPres"><a href="#presentationDiv">Présentation</a></li>
+            <li type="none" id="liHome"><router-link to="/" >Accueil</router-link></li>
+            <li type="none" id="liPres"><router-link to="/Error">Présentation</router-link></li>
             <li type="none" id="liProject"><a href="#projectDiv">Mes projets</a></li>
           </menu>
         </nav>     

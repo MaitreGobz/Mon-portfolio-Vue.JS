@@ -3,12 +3,12 @@
         <div id="footer">
             <div class="rsLink">
                 <a href="https://github.com/MaitreGobz" target="_blank">
-                <img src="./assets/images/github.png" class="rsLink" alt="Lien vers profil GitHub">
+                <img src="/src/assets/images/github.png" class="rsLink" alt="Lien vers profil GitHub">
                 </a>
             </div>
             <div class="rsLink">
                 <a href=" https://x.com/maitregobz" target="_blank">
-                <img src="./assets/images/twitter.png" class="rsLink" alt="Lien vers profil X">
+                <img src="/src/assets/Images/twitter.png" class="rsLink" alt="Lien vers profil X">
                 </a>
             </div>
         </div>
