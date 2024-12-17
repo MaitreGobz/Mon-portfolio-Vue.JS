@@ -20,17 +20,18 @@
     --gry: rgb(192, 192, 192);
     --gry2: rgba(161, 161, 161, 1);
     --gry3: rgba(197, 197, 197, 1);
-    --red: rgba(246, 24, 24, 1);
+    --gry4:rgba(184, 185, 180, 1);
+    --red: rgb(246, 24, 24);
     --red2: rgba(255, 109, 0, 1);
     --ylw: rgba(255, 214, 0, 1);
     --grn: rgba(38, 172, 109, 1);
     --ble: rgba(3, 155, 229, 1);
+    --overlay: rgba(51, 51, 51, 0.827);
 }
 
 body {
     font-size: 62.5%;
-    background-color: var(--gry);
     position: relative;
-    background-image: url(/src/assets/Images/blue-wavy-background.jpg);
-    background-size: cover;
+    text-shadow: black 3px 3px 3px;
+    background-color: var(--red);
 }
