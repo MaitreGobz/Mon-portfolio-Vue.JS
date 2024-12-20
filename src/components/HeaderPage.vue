@@ -6,9 +6,9 @@
       <div class="menuNav">
         <nav>
           <menu>
-            <a href="/#home" class="headerLinks">Accueil</a>
-            <a href="/#presentation" class="headerLinks">Présentation</a>
-            <a href="/#projectDiv" class="headerLinks">Projets</a>
+            <a v-bind:class="{active: activeSection === 'home'}" href="/#home" class="headerLinks">Accueil</a>
+            <a v-bind:class="{active: activeSection === 'presentation'}" href="/#presentation" class="headerLinks">Présentation</a>
+            <a v-bind:class="{active: activeSection === 'projectDiv'}" href="/#projectDiv" class="headerLinks">Projets</a>
           </menu>
         </nav>     
       </div>
@@ -19,7 +19,7 @@
       </div>
       <div class="contactLink">
         <nav>
-        <a href="/#contact-form" class="headerLinks">Contact</a>
+        <a v-bind:class="{active: activeSection === 'contactForm'}" href="/#contact-form" class="headerLinks">Contact</a>
         </nav>
       </div>
     </div>
@@ -27,38 +27,35 @@
 </template>
 
 <script setup>
-import { onMounted, onUnmounted } from 'vue';
 
-// Function to manage link activation on scroll
-function scrollActive() {
+import { ref, onMounted, onUnmounted } from 'vue';
+
+// Reference to store the active section ID
+const activeSection = ref('home');
+
+// Function to update the active section based on scroll
+function updateActiveSection() {
   const sections = document.querySelectorAll('section');
-  const linksNav = document.querySelectorAll ('nav a');
 
-  sections.forEach(function (section) {
-    let top = window.scrollY;
-    let offset = section.offsetTop ;
-    let height = section.offsetHeight;
-    let id = section.getAttribute('id');
+  sections.forEach((section) => {
+    const top = window.scrollY;
+    const offset = section.offsetTop;
+    const height = section.offsetHeight;
+    const id = section.getAttribute('id');
 
-    if(top >= offset && top < offset + height) {
-      linksNav.forEach((link) => {
-        link.classList.remove('active');
-      });
-      const activeLink = document.querySelector(`nav a[href*=${id}]`);
-      if (activeLink) {
-        activeLink.classList.add('active');
-      }
+    if (top >= offset && top < offset + height) {
+      activeSection.value = id;
     }
   });
-};
+}
 
-// Adding and removing the scroll event
+// Add and remove event listener on scroll
 onMounted(() => {
-  window.addEventListener('scroll', scrollActive);
+  window.addEventListener('scroll', updateActiveSection);
 });
 
 onUnmounted(() => {
-  window.removeEventListener('scroll', scrollActive);
+  window.removeEventListener('scroll', updateActiveSection);
 });
 </script>
 
@@ -99,11 +96,13 @@ header {
     margin-right: 350px;
   }
 
-
+  a.headerLinks {
+    text-shadow: none;
+  }
   
   a.headerLinks:hover {
     font-size: 1.4rem;
-    
+    transition: text-decoration 0.3s;    
   }
 
   a.active {

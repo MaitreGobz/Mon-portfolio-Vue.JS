@@ -1,49 +1,35 @@
 <template>
-    <section v-if="revele1" id="project">
+    <section v-if="revele" id="project">
         <div  class="bloc-modal">
-            <div v-on:click="toggleModale1" class="overlay">
+            <div v-on:click="toggleModale" class="overlay">
             </div>
             <div class="modal">
-                <button v-on:click="toggleModale1" class="close-modal">
+                <button v-on:click="toggleModale" class="close-modal">
                     X
                 </button>              
                 <div class="img-details">
-                        <a href="/src/assets/Images/CV1.png" target="_blank">
-                        <img src="/src/assets/Images/CV1.png" class="img-details" alt="CV1">
-                        </a>
-                        <a href="/src/assets/Images/CV2.png" target="_blank">
-                            <img src="/src/assets/Images/CV2.png" class="img-details" alt="CV2">
-                        </a>
-
-                        <a href="/src/assets/Images/CV3.png" target="_blank">
-                            <img src="/src/assets/Images/CV3.png" class="img-details" alt="CV3">
-                        </a>
-                        <a href="/src/assets/Images/CV4.png" target="_blank">
-                            <img src="/src/assets/Images/CV4.png" class="img-details" alt="CV4">
-                        </a>                  
+                    <a v-for="(image,index) in project.images" :key="index" :href="image" target="_blank">
+                        <img :src="image" :alt="`Image ${index + 1} de ${project.title}`" class="img-details" >
+                    </a>              
                 </div>
                 <div class="projec-details">
-                    <h1 class="project">CV HTML/CSS</h1>
+                    <h1 class="project">{{ project.title }}</h1>
                     <p class="project">
                         <strong>Date de création :</strong>
-                        25 Septembre 2024
+                        {{project.creationDate}}
                     </p>
                     <p class="project">
                         <strong>Technologies utilisées :</strong>
-                        HTML, CSS, GitHub
+                        {{ project.technoUsed}}
                     </p>
                     <div class="modal-link">
-                        <router-link to="/Error">
-                            <a href="https://github.com/MaitreGobz/Mon-CV-en-ligne" target="_blank" class="modalLink">
-                                Lien vers le repository GitHub
+                            <a :href="project.projectLink" target="_blank" class="modalLink">
+                                Lien GitHub / Télécharger
                             </a>
-                        </router-link>
                     </div>
                     <p class="project">
                         <strong>Description :</strong>
-                        Ce projet a été réalisé dans le cadre de ma formation de
-                        développeur Web, c'est un CV intéractif conçut en HTLM et CCS
-                        par le biais de VSCode.
+                        {{project.description}}
                     </p>
                 </div>
             </div>
@@ -52,12 +38,22 @@
 </template>
 
 <script setup>
-
+// import { ref } from 'vue';
 import { defineProps } from 'vue';
 
-defineProps({
-  revele1: Boolean,
-  toggleModale1: Function
+const props = defineProps({
+    project: {
+        type: Object,
+        
+    },
+    revele: {
+        type: Boolean,
+        required: true,
+    },
+    toggleModale: {
+        type: Function,
+        required: true,
+    }
 });
 
 </script>

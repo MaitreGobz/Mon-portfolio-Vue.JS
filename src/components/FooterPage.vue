@@ -45,7 +45,7 @@ img.rs-link {
 img.rs-link:hover {
   width: 60px;
   height: 60px;
-  transition: 0.8s;
+  transition: 0.3s ease-in-out;
   opacity: 0.50;
 }
 </style>
