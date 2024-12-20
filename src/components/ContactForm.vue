@@ -1,5 +1,5 @@
 <template>
-    <section id="contact-form">
+    <section id="contactForm">
 
         <!-- Contact Form -->
          <section class="contact-form">
@@ -91,7 +91,7 @@ function sendEmail() {
 <style scoped>
 
 /* Contact form style */
-section#contact-form {
+section#contactForm {
     background-image: url(/src/assets/Images/bck-contact.jpg);
     text-shadow: none;
     font-size: 1.4rem;
