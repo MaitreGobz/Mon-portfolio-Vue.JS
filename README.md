@@ -11,7 +11,7 @@ Ce projet est un portfolio réalisé dans le cadre de ma formation de développe
 Avant de commencer, assurez-vous que votre environnement de développement est configuré avec les outils suivants :
 
 - **Node.js** (dernière version à jour) : [Télécharger Node.js](https://nodejs.org/)
-- **npm** ou **yarn** : npm est inclus avec Node.js, mais Yarn peut être installé séparément.
+- **npm** : npm est inclus avec Node.js.
 - **VSCode** : [Télécharger VSCode](https://code.visualstudio.com/) + [Télécharger Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (et désactiver Vetur).
 - **Git** : pour cloner le dépôt et gérer le contrôle de version. [Télécharger Git](https://git-scm.com/)
 
