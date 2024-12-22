@@ -42,7 +42,7 @@ function openModal(project) {
 const projects = ref ([
     {
         id: 1,
-        title: 'CV HTML/CSS',
+        title: 'CV intéractif en HTML/CSS',
         creationDate: '25 Septembre 2024',
         technoUsed: "HTML, CSS, GitHub",
         projectLink: 'https://github.com/MaitreGobz/Mon-CV-en-ligne',
@@ -59,7 +59,7 @@ const projects = ref ([
     },
     {
         id: 2,
-        title: 'CAHIER DES CHARGES',
+        title: 'Cahier des charges',
         creationDate: '14 Octobre 2024',
         technoUsed: "Canva",
         projectLink: '/src/assets/documents/Cahier des Charges.pdf',
@@ -148,7 +148,8 @@ h1.projectTitle {
 }
 
 h2.project-title {
-    font-weight: 800;
+    font-family: 'Inter', serif;
+    font-weight: 700;
     color: var(--red);
     text-shadow: black 1px 1px 1px;
 }

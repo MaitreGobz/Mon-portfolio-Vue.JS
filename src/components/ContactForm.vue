@@ -3,7 +3,7 @@
 
         <!-- Contact Form -->
          <section class="contact-form">
-            <h1 class="contact-title">N'hésitez pas à me contatcer!</h1>
+            <h1 class="contact-title">N'hésitez pas à me contacter!</h1>
                 <hr>
             <form @submit.prevent="sendEmail">                               
                     <div class="form-group">
@@ -141,7 +141,7 @@ textarea {
 button {
   width: 100%;
   padding: 10px 15px;
-  background: var(--red2);
+  background: var(--red);
   color: white;
   border: none;
   border-radius: 5px;
@@ -150,7 +150,7 @@ button {
 }
 
 button:hover {
-  background: var(--red);
+  background: var(--red2);
 }
 
 .response-message {
