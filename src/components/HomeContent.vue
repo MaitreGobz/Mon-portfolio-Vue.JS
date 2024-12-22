@@ -9,7 +9,7 @@
               passionné par les jeux vidéo et les technologies. 
               Doté d’un esprit logique, j’aime relever des défis techniques et 
               apprendre de nouvelles compétences pour concevoir des solutions web 
-              odernes et efficaces. Je suis motivé par l’envie de créer des expériences 
+              modernes et efficaces. Je suis motivé par l’envie de créer des expériences 
               interactives et de contribuer à des projets innovants. 
             </p>
           </section>
