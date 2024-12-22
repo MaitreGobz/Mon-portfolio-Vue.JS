@@ -70,7 +70,7 @@ vue-portfolio/
 ├── index.html       <> Le point d'entrée principal de l'application Vue.js.
 ├── package.json     📜 Configuration du projet, fichier contenant les scripts, les dépendances et les configurations de base du projet.
 ├── README.md        📖 Documentation.
-└── vite.config.js   ⚙️ ichier de configuration pour personnaliser Webpack, l'outil de build de Vue.js.
+└── vite.config.js   ⚙️ Fichier de configuration pour personnaliser Webpack, l'outil de build de Vue.js.
 
 ```
 
