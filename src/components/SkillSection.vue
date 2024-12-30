@@ -1,4 +1,5 @@
 <template>
+
     <section class="skillSection" id="skillSection">
         <h1 class="skills">Compétences</h1>
         <div class="skillSection">
@@ -24,6 +25,7 @@
             </div>
         </div>
     </section>
+    
 </template>
 
 

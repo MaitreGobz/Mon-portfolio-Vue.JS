@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
 
+/* Body and root style */
 * {
    box-sizing: border-box;
    margin: 0;
@@ -7,25 +8,24 @@
    outline: none;
    border: none;
    font-family: "Nunito", sans-serif;
-   font-optical-sizing: auto;
    font-style: normal;
    text-decoration: none;
    scroll-behavior: smooth;
 }
 
 :root {
-    --wht: rgba(255, 255, 255, 1);
+    --wht: rgb(255, 255, 255);
     --blk: rgba(0, 0, 0, 1);
-    --blk2: rgba(0, 22, 10, 1);
+    --blk2: rgb(0, 22, 10);
     --gry: rgb(192, 192, 192);
     --gry2: rgba(161, 161, 161, 1);
     --gry3: rgba(197, 197, 197, 1);
     --gry4:rgba(184, 185, 180, 1);
     --red: rgb(246, 24, 24);
-    --red2: rgba(255, 109, 0, 1);
-    --ylw: rgba(255, 214, 0, 1);
-    --grn: rgba(38, 172, 109, 1);
-    --ble: rgba(3, 155, 229, 1);
+    --red2: rgb(255, 109, 0);
+    --ylw: rgb(255, 214, 0);
+    --grn: rgb(38, 172, 109);
+    --ble: rgb(3, 155, 229);
     --overlay: rgba(51, 51, 51, 0.827);
 }
 

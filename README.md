@@ -4,7 +4,7 @@ Bienvenue dans ce projet Vue.js ! Ce fichier contient toutes les informations n�
 
 ## Présentation
 
-Ce projet est un portfolio réalisé dans le cadre de ma formation de développeur web et web mobile. L'objectif est de présenter mes compétences, projets réalisés et d'offrir une plateforme interactive pour les visiteurs. L'application est développée avec Vue.js et ne comporte ni hébergement ni back-end..
+Ce projet est un portfolio réalisé dans le cadre de ma formation de développeur web et web mobile. L'objectif est de présenter mes compétences, projets réalisés et d'offrir une plateforme interactive pour les visiteurs. L'application est développée avec Vue.js et ne comporte ni hébergement ni back-end.
 
 ## Prérequis
 

@@ -1,21 +1,23 @@
 <template>
+
     <footer>
         <div id="footer">
             <div class="rs-link">
-                    <a href="https://github.com/MaitreGobz" target="_blank">
-                    <img src="/src/assets/images/github.png" class="rs-link" alt="Lien vers profil GitHub">
-                    </a>
+                <a href="https://github.com/MaitreGobz" target="_blank">
+                <img src="/src/assets/images/github.png" class="rs-link" alt="Lien vers profil GitHub">
+                </a>
             </div>
             <div class="rs-link">
-                    <a href=" https://x.com/maitregobz" target="_blank">
-                    <img src="/src/assets/Images/twitter.png" class="rs-link" alt="Lien vers profil X">
-                    </a>               
+                <a href=" https://x.com/maitregobz" target="_blank">
+                <img src="/src/assets/Images/twitter.png" class="rs-link" alt="Lien vers profil X">
+                </a>               
             </div>
         </div>
         <div id="small">
-            <p><small>Dernière mise à jour le 16/12/2024</small></p>
+            <p><small>Dernière mise à jour le 23/12/2024</small></p>
         </div>
-    </footer>   
+    </footer>
+       
 </template>
 
 <style scoped>

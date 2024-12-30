@@ -1,42 +1,44 @@
 <template>
-    <section id="contactForm">
 
-        <!-- Contact Form -->
-         <section class="contact-form">
-            <h1 class="contact-title">N'hésitez pas à me contacter!</h1>
-                <hr>
-            <form @submit.prevent="sendEmail">                               
-                    <div class="form-group">
-                        <label for="firstName">Nom :</label>
-                        <input v-model="form.firstName" id="firstName" type="text" placeholder="Votre nom" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="lastName">Prénom :</label>
-                        <input v-model="form.lastName" id="lastName" type="text" placeholder="Votre prénom" required>
-                    </div>
-                    <div class="form-group">                           
-                        <label for="email">Adresse e-mail :</label>
-                        <input v-model="form.email" id="email" type="email" placeholder="Votre adresse e-mail" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="subject">Objet :</label>
-                        <input v-model="form.subject" id="subject" type="text" placeholder="L'objet de votre message" required>                             
-                    </div>
-                    <div class="form-group">
-                        <label for="message">Message :</label>
-                        <textarea v-model="form.message" id="message" placeholder="Votre message..." resquired></textarea>
-                    </div>
-                <div class="send-btn">
-                        <button type="submit" class="send-btn">Envoyer</button>                   
-                </div>
-                <!-- Response of success of sent -->
-                <div v-if="responseMessage" class="response-message">
-                    {{ responseMessage }}
-                </div>
-            </form>
-        </section>
+  <section id="contact-form">
 
+  <!-- Contact Form -->
+    <section class="contact-form">
+      <h1 class="contact-title">N'hésitez pas à me contacter!</h1>
+      <hr>
+      <form @submit.prevent="sendEmail">                               
+        <div class="form-group">
+          <label for="firstName">Nom :</label>
+          <input v-model="form.firstName" id="firstName" type="text" placeholder="Votre nom" required>
+        </div>
+        <div class="form-group">
+          <label for="lastName">Prénom :</label>
+          <input v-model="form.lastName" id="lastName" type="text" placeholder="Votre prénom" required>
+        </div>
+        <div class="form-group">                           
+          <label for="email">Adresse e-mail :</label>
+          <input v-model="form.email" id="email" type="email" placeholder="Votre adresse e-mail" required>
+        </div>
+        <div class="form-group">
+          <label for="subject">Objet :</label>
+          <input v-model="form.subject" id="subject" type="text" placeholder="L'objet de votre message" required>                             
+        </div>
+        <div class="form-group">
+          <label for="message">Message :</label>
+          <textarea v-model="form.message" id="message" placeholder="Votre message..." resquired></textarea>
+        </div>
+        <div class="send-btn">
+          <button type="submit" class="send-btn">Envoyer</button>                   
+        </div>
+        <!-- Response of success of sent -->
+        <div v-if="responseMessage" class="response-message">
+          {{ responseMessage }}
+        </div>
+      </form>
     </section>
+
+  </section>
+
 </template>
 
 <script setup>
@@ -85,13 +87,12 @@ function sendEmail() {
     form.message='';
 }
 
-
 </script>
 
 <style scoped>
 
 /* Contact form style */
-section#contactForm {
+section#contact-form {
     background-image: url(/src/assets/Images/bck-contact.jpg);
     text-shadow: none;
     font-size: 1.4rem;

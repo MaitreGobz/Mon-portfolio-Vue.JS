@@ -1,16 +1,17 @@
 <template>
+
     <section class="project" id="projectDiv">
         <h1 class="projectTitle">PROJETS</h1>
         <div class="projectModal">         
-                <div v-for="project in projects" :key="project.id" class="project">
-                    <div class="shadow">
-                        <img :src= "project.mainImage" :alt="`Image du projet ${project.title}`" class="img-project" >
-                        <h2 class="project-title">{{ project.title }}</h2>
-                        <button @click="openModal(project)" class="modal-btn">
-                            Détails
-                        </button>
-                    </div>
-                </div>       
+            <div v-for="project in projects" :key="project.id" class="project">
+                <div class="shadow">
+                    <img :src= "project.mainImage" :alt="`Image du projet ${project.title}`" class="img-project" >
+                    <h2 class="project-title">{{ project.title }}</h2>
+                    <button @click="openModal(project)" class="modal-btn">
+                         Détails
+                    </button>
+                </div>
+            </div>       
         </div>
         <ProjectModal :revele="revele" :project="selectedProject" :toggleModale="toggleModale"/>
     </section>
@@ -18,6 +19,7 @@
 </template>
 
 <script setup>
+
 import { ref } from 'vue';
 import ProjectModal from './items/ProjectModal.vue';
 

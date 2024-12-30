@@ -1,25 +1,27 @@
 <template>
-    <section class="home" id="home">
-        <div class="homeContent" >
-          <section id="presentation">
-           <h3 >Bonjour, je suis</h3>
-           <h1>Lucas NAYET</h1>
-           <h3>et je suis <span class="text"></span></h3>
-           <p class="presentation">Développeur web en formation au Centre Européen de Formation,
-              passionné par les jeux vidéo et les technologies. 
-              Doté d’un esprit logique, j’aime relever des défis techniques et 
-              apprendre de nouvelles compétences pour concevoir des solutions web 
-              modernes et efficaces. Je suis motivé par l’envie de créer des expériences 
-              interactives et de contribuer à des projets innovants. 
-            </p>
-          </section>
-        </div>
-        <div class="homeImg">
-            <picture>
-                <img src="/src/assets/Images/Lucas.png" alt="Photo Lucas Nayet">
-            </picture>
-        </div>
+
+  <section class="home" id="home">
+    <div class="homeContent" >
+      <section id="presentation">
+        <h3 >Bonjour, je suis</h3>
+        <h1>Lucas NAYET</h1>
+        <h3>et je suis <span class="text"></span></h3>
+        <p class="presentation">Développeur web en formation au Centre Européen de Formation,
+          passionné par les jeux vidéo et les technologies. 
+          Doté d’un esprit logique, j’aime relever des défis techniques et 
+          apprendre de nouvelles compétences pour concevoir des solutions web 
+          modernes et efficaces. Je suis motivé par l’envie de créer des expériences 
+          interactives et de contribuer à des projets innovants. 
+        </p>
       </section>
+    </div>
+    <div class="homeImg">
+      <picture>
+        <img src="/src/assets/Images/Lucas.png" alt="Photo Lucas Nayet">
+      </picture>
+    </div>
+  </section>
+
 </template>
 
 <script setup>
@@ -125,6 +127,5 @@ p.presentation {
         transform: translateY(0%);
     }   
 }
-
 
 </style>

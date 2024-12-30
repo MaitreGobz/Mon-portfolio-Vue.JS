@@ -1,8 +1,9 @@
 <template>
+
   <section id="error">
     <div class="error">
       <picture class="imageError">
-        <img src="/src/assets/Images/Error404(1).png" alt="image erreur" class="imageError">
+        <img src="/src/assets/Images/Error404.png" alt="image erreur" class="imageError">
       </picture>
     </div>
     <div class="error404">
@@ -10,10 +11,12 @@
         <router-link to="/" class="retrunHome"><p class="returnHome">Accueil</p></router-link>
     </div>
   </section>
+
 </template>
 
 <style scoped>
 
+/* Error page style */
 section#error {
   background-image: url(/src/assets/Images/blue-wavy-background.jpg);
   background-size:auto;

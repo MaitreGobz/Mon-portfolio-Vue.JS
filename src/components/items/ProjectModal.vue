@@ -1,4 +1,5 @@
 <template>
+
     <section v-if="revele" id="project">
         <div  class="bloc-modal">
             <div v-on:click="toggleModale" class="overlay">
@@ -23,9 +24,9 @@
                         {{ project.technoUsed}}
                     </p>
                     <div class="modal-link">
-                            <a :href="project.projectLink" target="_blank" class="modalLink">
-                                Lien GitHub / Télécharger
-                            </a>
+                        <a :href="project.projectLink" target="_blank" class="modalLink">
+                            Lien GitHub / Télécharger
+                        </a>
                     </div>
                     <p class="project">
                         <strong>Description :</strong>
@@ -35,9 +36,11 @@
             </div>
         </div>
     </section>
+
 </template>
 
 <script setup>
+
 // import { ref } from 'vue';
 import { defineProps } from 'vue';
 
@@ -60,6 +63,7 @@ const props = defineProps({
 
 <style scoped>
 
+/* Modal window style */
 section#project {
     background-color: var(--gry4);
 }
@@ -74,7 +78,6 @@ div.project {
 div.img-details {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    justify-items: inline;
     width: 70rem;
 }
 
@@ -105,6 +108,7 @@ img.img-details {
 }
 
 h1.project {
+    font-family: "Inter", sans-serif;
     font-size: 1.6rem;
     text-shadow: none;
     margin-bottom: 1rem;
@@ -162,7 +166,11 @@ p.project {
     top: 1rem;
     right: 1rem;
     cursor: pointer;
-    background: var(--red2);
+    background: var(--red);
     color: var(--wht);
+}
+
+.close-modal:hover {
+  background: var(--red2);
 }
 </style>

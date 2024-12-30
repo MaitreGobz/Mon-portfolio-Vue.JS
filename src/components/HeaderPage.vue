@@ -1,6 +1,5 @@
-<!-- Permanent header navbar -->
-
 <template>
+
   <header>
     <div class="header">
       <div class="menuNav">
@@ -14,16 +13,17 @@
       </div>
       <div class="logo">
         <a href="/#home">
-          <img alt="Lucas Nayet's logo" id="logoLN" src="/src/assets/Images/Logo 2.png" width="50" height="66" />
+          <img alt="Lucas Nayet's logo" id="logoLN" src="/src/assets/Images/Logo 2.png" width="50" height="66" >
         </a> 
       </div>
       <div class="contactLink">
         <nav>
-        <a v-bind:class="{active: activeSection === 'contactForm'}" href="/#contact-form" class="headerLinks">Contact</a>
+        <a v-bind:class="{active: activeSection === 'contact-form'}" href="/#contact-form" class="headerLinks">Contact</a>
         </nav>
       </div>
     </div>
   </header>
+  
 </template>
 
 <script setup>
@@ -57,6 +57,7 @@ onMounted(() => {
 onUnmounted(() => {
   window.removeEventListener('scroll', updateActiveSection);
 });
+
 </script>
 
 <style scoped>
